@@ -1,0 +1,40 @@
+{
+  "name": "logfella-osd-transport",
+  "version": "0.3.2",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "description": "An On Screen Display transport for Logfella",
+  "main": "lib/Osd.transport.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "logfella-common-transport": "^0.3.2",
+    "node-notifier": "^4.3.1",
+    "tree-kit": "^0.5.6"
+  },
+  "devDependencies": {
+    "logfella": "^0.3.2",
+    "expect.js": "^0.3.1",
+    "jshint": "^2.5.6",
+    "mocha": "^1.21.4"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cronvel/logfella-osd-transport.git"
+  },
+  "keywords": [
+    "logger",
+    "notify",
+    "osd"
+  ],
+  "author": "Cédric Ronvel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cronvel/logfella-osd-transport/issues"
+  }
+}
