@@ -37,7 +37,6 @@ var Logfella = require( 'logfella' ) ;
 
 
 
-
 			/* Tests */
 
 
