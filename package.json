@@ -15,7 +15,7 @@
     "tree-kit": "^0.5.6"
   },
   "optionalDependencies": {
-    "freedesktop-notifications": "^1.1.1"
+    "freedesktop-notifications": "^1.1.2"
   },
   "devDependencies": {
     "logfella": "^0.3.2",
