@@ -1,8 +1,8 @@
 {
   "name": "logfella-osd-transport",
-  "version": "0.3.12",
+  "version": "1.0.0",
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=6.0.0"
   },
   "description": "An On Screen Display transport for Logfella",
   "main": "lib/Osd.transport.js",
@@ -10,21 +10,19 @@
     "test": "test"
   },
   "dependencies": {
-    "logfella-common-transport": "^0.3.4",
-    "node-notifier": "^4.5.0",
-    "tree-kit": "^0.5.12"
+    "logfella-common-transport": "^1.0.0",
+    "node-notifier": "^5.2.1",
+    "seventh": "^0.7.8",
+    "tree-kit": "^0.5.27"
   },
   "optionalDependencies": {
     "freedesktop-notifications": "^1.2.1"
   },
   "devDependencies": {
-    "logfella": "^0.3.2",
-    "expect.js": "^0.3.1",
-    "jshint": "^2.5.6",
-    "mocha": "^1.21.4"
+    "logfella": "^1.0.3"
   },
   "scripts": {
-    "test": "mocha -R dot"
+    "test": "tea-time -R dot"
   },
   "repository": {
     "type": "git",
@@ -39,5 +37,13 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/cronvel/logfella-osd-transport/issues"
+  },
+  "copyright": {
+    "title": "Logfella OSD Transport",
+    "years": [
+      2015,
+      2018
+    ],
+    "owner": "Cédric Ronvel"
   }
 }

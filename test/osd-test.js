@@ -1,8 +1,8 @@
 /*
-	The Cedric's Swiss Knife (CSK) - CSK logger toolbox
+	Logfella OSD Transport
 
-	Copyright (c) 2015 Cédric Ronvel 
-	
+	Copyright (c) 2015 - 2018 Cédric Ronvel
+
 	The MIT License (MIT)
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,8 +31,6 @@
 
 
 var Logfella = require( 'logfella' ) ;
-//var async = require( 'async-kit' ) ;
-//var expect = require( 'expect.js' ) ;
 
 
 
@@ -44,9 +42,9 @@ var Logfella = require( 'logfella' ) ;
 
 describe( "OSD Transport" , function() {
 	
-	it( "simple test" , function( done ) {
+	it( "simple test" , async () => {
 		
-		var logger = Logfella.create() ;
+		var logger = new Logfella() ;
 		
 		logger.setGlobalConfig( {
 			minLevel: 'trace' ,
@@ -56,14 +54,11 @@ describe( "OSD Transport" , function() {
 		logger.addTransport( 'console' , { minLevel: 'trace' , output: process.stderr } ) ;
 		logger.addTransport( 'osd' , { minLevel: 'trace' } ) ;
 		
-		logger.warning( 'storage' , 'gloups' , 'We are running out of storage! Only %iMB left' , 139 ) ;
-		logger.info( 'idle' , { some: 'meta' , few: 'data' , somethingElse: 4 } , 'Youpla boum!' ) ;
-		
-		// The last, with callback...
-		logger.error( 'main' , 'Something bad happens...' , done ) ;
+		await logger.warning( 'storage' , 'gloups' , 'We are running out of storage! Only %iMB left' , 139 ) ;
+		await logger.info( 'idle' , { some: 'meta' , few: 'data' , somethingElse: 4 } , 'Youpla boum!' ) ;
+		await logger.error( 'main' , 'Something bad happens...' ) ;
 	} ) ;
 	
 } ) ;
-
 
 
