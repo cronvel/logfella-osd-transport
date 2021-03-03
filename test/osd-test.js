@@ -30,20 +30,13 @@
 
 
 
-var Logfella = require( 'logfella' ) ;
+const Logfella = require( 'logfella' ) ;
 
 
 
-
-
-			/* Tests */
-
-
-
-describe( "OSD Transport" , function() {
+describe( "OSD Transport" , () => {
 	
 	it( "simple test" , async () => {
-		
 		var logger = new Logfella() ;
 		
 		logger.setGlobalConfig( {
@@ -58,7 +51,5 @@ describe( "OSD Transport" , function() {
 		await logger.info( 'idle' , { some: 'meta' , few: 'data' , somethingElse: 4 } , 'Youpla boum!' ) ;
 		await logger.error( 'main' , 'Something bad happens...' ) ;
 	} ) ;
-	
 } ) ;
-
 
